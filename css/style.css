@@ -1,253 +1,53 @@
-/* ==========================================================================
-   MINIMALIST PREMIUM DESIGN SYSTEM & CSS VARIABLES
-   ========================================================================== */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
-
+/* CSS Variables for Dark and Light Mode */
 :root {
-  /* Dark Theme (Default) */
-  --bg-body: #090b10;
-  --bg-surface: rgba(17, 20, 28, 0.7);
-  --border-color: rgba(255, 255, 255, 0.08);
-  
-  --text-primary: #f1f5f9;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  
-  --accent-primary: #6366f1;
-  --accent-secondary: #06b6d4;
-  --accent-glow: rgba(99, 102, 241, 0.15);
-  
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Plus Jakarta Sans', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
-  
-  --radius-md: 10px;
-  --radius-full: 9999px;
-  
-  --nav-height: 70px;
-  --transition-smooth: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --link-color: #3b82f6;
+  --toggle-bg: #333333;
 }
 
-/* Light Theme */
 [data-theme="light"] {
-  --bg-body: #f8fafc;
-  --bg-surface: rgba(255, 255, 255, 0.8);
-  --border-color: rgba(0, 0, 0, 0.06);
-  
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-muted: #94a3b8;
-  
-  --accent-primary: #4f46e5;
-  --accent-secondary: #0284c7;
-  --accent-glow: rgba(79, 70, 229, 0.1);
+  --bg-color: #ffffff;
+  --text-color: #121212;
+  --link-color: #2563eb;
+  --toggle-bg: #e2e8f0;
 }
 
-/* ==========================================================================
-   RESET & BASE STYLES
-   ========================================================================== */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-  font-size: 16px;
-  -webkit-font-smoothing: antialiased;
-}
-
+/* Base Styles */
 body {
-  font-family: var(--font-body);
-  background-color: var(--bg-body);
-  color: var(--text-primary);
-  line-height: 1.6;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  transition: background-color var(--transition-smooth), color var(--transition-smooth);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: sans-serif;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* ==========================================================================
-   TYPOGRAPHY & UTILITIES
-   ========================================================================== */
-h1, h2, h3 {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  letter-spacing: -0.01em;
+/* Nav Link Styles */
+nav {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
 }
 
 a {
-  color: inherit;
+  color: var(--link-color);
   text-decoration: none;
-  transition: color 0.2s ease;
 }
 
-p {
-  color: var(--text-secondary);
+a:hover {
+  text-decoration: underline;
 }
 
-.container {
-  width: 100%;
-  max-width: 650px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-/* ==========================================================================
-   HEADER & NAVIGATION
-   ========================================================================== */
-.navbar {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  height: var(--nav-height);
-  z-index: 100;
-  background: var(--bg-body);
-  transition: background-color var(--transition-smooth);
-}
-
-.nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.logo {
-  font-family: var(--font-heading);
-  font-size: 1.15rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-.logo span {
-  color: var(--accent-primary);
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  list-style: none;
-}
-
-.nav-link {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-}
-
-.nav-link:hover, .nav-link.active {
-  color: var(--text-primary);
-}
-
-.nav-actions {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-/* Theme Switcher Toggle */
-.theme-toggle {
-  background: transparent;
-  border: 1px solid var(--border-color);
-  color: var(--text-primary);
-  width: 36px;
-  height: 36px;
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Simple Theme Toggle Button */
+.theme-toggle-btn {
+  background-color: var(--toggle-bg);
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  padding: 0.5rem 1rem;
   cursor: pointer;
-  transition: all var(--transition-smooth);
-}
-
-.theme-toggle:hover {
-  border-color: var(--text-secondary);
-  transform: rotate(12deg);
-}
-
-.theme-icon-sun {
-  display: none;
-}
-
-[data-theme="light"] .theme-icon-moon {
-  display: none;
-}
-
-[data-theme="light"] .theme-icon-sun {
-  display: block;
-  color: #f59e0b;
-}
-
-/* ==========================================================================
-   MAIN CONTENT
-   ========================================================================== */
-.main-content {
-  flex-grow: 1;
-  padding: 4rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.page-title {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, var(--text-primary) 30%, var(--text-secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.testing-box {
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-  color: var(--accent-primary);
-  border: 1px dashed var(--border-color);
-  padding: 1.5rem;
-  border-radius: var(--radius-md);
-  background: rgba(99, 102, 241, 0.02);
-  margin-bottom: 2rem;
-}
-
-/* ==========================================================================
-   CV SECTIONS
-   ========================================================================== */
-.cv-section {
-  margin-bottom: 2.5rem;
-}
-
-.cv-section-title {
-  font-size: 1.25rem;
-  color: var(--text-primary);
-  border-bottom: 1px solid var(--border-color);
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.cv-section-title::before {
-  content: '';
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: var(--accent-primary);
-}
-
-/* ==========================================================================
-   FOOTER
-   ========================================================================== */
-.footer {
-  padding: 2.5rem 0;
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  text-align: center;
-  border-top: 1px solid var(--border-color);
+  border-radius: 4px;
+  transition: background-color 0.3s;
 }
