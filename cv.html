@@ -8,7 +8,8 @@
 </head>
 <body>
 
-  <nav class="navbar">
+  <!-- Navigation Bar -->
+  <header class="navbar">
     <div class="container nav-container">
       <a href="index.html" class="logo">
         Alvin<span>.</span>
@@ -42,33 +43,33 @@
         </button>
       </div>
     </div>
-  </nav>
+  </header>
 
   <main class="container">
     <div class="cv-container">
       
       <!-- Timeline Left Column (Sticky Years) -->
-      <div class="timeline-years">
-        <div class="timeline-line-wrapper"></div>
+      <div class="timeline-years-panel">
+        <div class="timeline-track-bar"></div>
         <div class="timeline-year-node active" id="year-2026">2026</div>
         <div class="timeline-year-node" id="year-2025">2025</div>
         <div class="timeline-year-node" id="year-2021">2021</div>
       </div>
 
-      <!-- Content Right Column (Cards Sorted Today to Past) -->
+      <!-- Content Right Column -->
       <div class="timeline-content-list">
         
-        <!-- Experience: MGH (2025-Present) -->
+        <!-- Experience: MGH (2025 - Present) -->
         <article class="cv-card" data-year-target="year-2026" id="mgh-card">
           <div class="cv-card-header">
-            <!-- MGH Logo -->
+            <!-- Official MGH Logo -->
             <div class="logo-container">
-              <img src="assets/logos/mgh.svg" alt="Massachusetts General Hospital Logo" class="logo-img">
+              <img src="assets/logos/mgh.png" alt="Massachusetts General Hospital Logo" class="logo-img">
             </div>
             
             <div class="cv-title-group">
               <h3 class="cv-role">Research Assistant</h3>
-              <span class="cv-organization">Massachusetts General Hospital (MGH)</span>
+              <div class="cv-organization">Massachusetts General Hospital (MGH)</div>
               <div>
                 <span class="accolade-badge accolade-green">
                   <span class="pulsing-dot"></span>
@@ -83,26 +84,24 @@
             </div>
           </div>
 
-          <p class="entry-details">TESTING</p>
-
           <ul class="cv-bullets">
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-            <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-            <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis nibh in purus iaculis iaculis.</li>
+            <li>Nullam sollicitudin, leo eget mollis tempor, justo nibh mollis tortor, vitae auctor metus elit ut justo.</li>
+            <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</li>
           </ul>
         </article>
 
-        <!-- Education: UCSD (2021-2025) -->
+        <!-- Education: UCSD (2021 - 2025) -->
         <article class="cv-card" data-year-target="year-2025" id="ucsd-card">
           <div class="cv-card-header">
-            <!-- UCSD Logo -->
+            <!-- Official UCSD Logo -->
             <div class="logo-container">
-              <img src="assets/logos/ucsd.svg" alt="University of California San Diego Logo" class="logo-img">
+              <img src="assets/logos/ucsd.png" alt="UC San Diego Logo" class="logo-img">
             </div>
             
             <div class="cv-title-group">
               <h3 class="cv-role">BS Molecular Cell Biology</h3>
-              <span class="cv-organization">UC San Diego</span>
+              <div class="cv-organization">UC San Diego</div>
               <div>
                 <span class="accolade-badge accolade-gold">★ Cum Laude</span>
               </div>
@@ -114,27 +113,25 @@
             </div>
           </div>
 
-          <p class="entry-details">TESTING</p>
-
           <ul class="cv-bullets">
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-            <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-            <li>Sunt in culpa qui officia deserunt mollit anim id est laborum. Aliquip ex ea commodo consequat.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum eleifend nibh, vel imperdiet urna porta at.</li>
+            <li>Donec et purus congue, hendrerit ipsum et, porttitor eros. In ac scelerisque lorem.</li>
+            <li>Maecenas mollis rhoncus feugiat. Integer ut egestas nisi, in tincidunt nisi.</li>
           </ul>
         </article>
 
-        <!-- Technical Skills / Starting block (2021) -->
+        <!-- Skills: Technical Foundations (2021) -->
         <article class="cv-card" data-year-target="year-2021" id="skills-card">
           <div class="cv-card-header">
             <div class="logo-container" style="background-color: var(--toggle-bg);">
-              <svg class="entry-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width: 32px; height: 32px;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width: 32px; height: 32px; color: var(--accent-blue);">
                 <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
               </svg>
             </div>
             
             <div class="cv-title-group">
               <h3 class="cv-role">Technical Foundations</h3>
-              <span class="cv-organization">Skills & Core Proficiencies</span>
+              <div class="cv-organization">Skills & Core Proficiencies</div>
             </div>
 
             <div class="cv-meta-group">
@@ -143,11 +140,9 @@
             </div>
           </div>
 
-          <p class="entry-details">TESTING</p>
-
           <ul class="cv-bullets">
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-            <li>Aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sollicitudin arcu purus.</li>
+            <li>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae.</li>
           </ul>
         </article>
 
