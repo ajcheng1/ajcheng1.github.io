@@ -4,7 +4,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
-  initTimelineScrollTracker();
 });
 
 /* ==========================================================================
@@ -35,39 +34,4 @@ function initThemeToggle() {
       }
     });
   }
-}
-
-/* ==========================================================================
-   TIMELINE SCROLL TRACKER (Used on cv.html)
-   ========================================================================== */
-function initTimelineScrollTracker() {
-  const cards = document.querySelectorAll('.cv-card');
-  const yearNodes = document.querySelectorAll('.timeline-year-node');
-
-  if (!cards.length || !yearNodes.length) return;
-
-  const observerOptions = {
-    root: null,
-    rootMargin: '-20% 0px -60% 0px', // Trigger when card occupies center viewport
-    threshold: 0
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const targetYearId = entry.target.getAttribute('data-year-target');
-        
-        // Remove active class from all year nodes
-        yearNodes.forEach(node => node.classList.remove('active'));
-        
-        // Add active class to corresponding year node
-        const activeNode = document.getElementById(targetYearId);
-        if (activeNode) {
-          activeNode.classList.add('active');
-        }
-      }
-    });
-  }, observerOptions);
-
-  cards.forEach(card => observer.observe(card));
 }
