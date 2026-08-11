@@ -1,15 +1,14 @@
 /**
- * Alvin's Minimal Website - Main JavaScript
+ * Alvin's Tailwind Website - Main JavaScript
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
-  initActiveNavLink();
   initTimelineScrollTracker();
 });
 
 /* ==========================================================================
-   THEME SWITCHER (DARK / LIGHT)
+   THEME SWITCHER (DARK / LIGHT) - Tailwind CSS Compatible
    ========================================================================== */
 function initThemeToggle() {
   const themeToggleBtn = document.getElementById('themeToggle');
@@ -17,40 +16,29 @@ function initThemeToggle() {
   const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   
   // Set initial theme (default to dark if not set)
-  const initialTheme = savedTheme || (prefersDark ? 'dark' : 'dark');
-  document.documentElement.setAttribute('data-theme', initialTheme);
+  const isDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
+  if (isDark) {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+  }
 
   if (themeToggleBtn) {
     themeToggleBtn.addEventListener('click', () => {
-      const currentTheme = document.documentElement.getAttribute('data-theme');
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      
-      document.documentElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
+      const isCurrentlyDark = document.documentElement.classList.contains('dark');
+      if (isCurrentlyDark) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
     });
   }
 }
 
 /* ==========================================================================
-   ACTIVE NAVIGATION LINK
-   ========================================================================== */
-function initActiveNavLink() {
-  const path = window.location.pathname;
-  const page = path.split("/").pop();
-  const navLinks = document.querySelectorAll('.nav-link');
-
-  navLinks.forEach(link => {
-    const href = link.getAttribute('href');
-    if (page === href || (page === '' && href === 'index.html')) {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
-    }
-  });
-}
-
-/* ==========================================================================
-   TIMELINE SCROLL TRACKER
+   TIMELINE SCROLL TRACKER (Used on cv.html)
    ========================================================================== */
 function initTimelineScrollTracker() {
   const cards = document.querySelectorAll('.cv-card');
