@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects — Alvin Cheng</title>
   <meta name="description" content="Projects by Alvin Cheng.">
-  
+
   <!-- Tailwind CSS v4 CDN -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  
+
   <!-- Google Fonts: Plus Jakarta Sans & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
 
   <!-- Custom Configuration & Custom Variants for dark mode -->
   <style type="text/tailwindcss">
@@ -31,32 +34,42 @@
     }
   </script>
 </head>
-<body class="bg-neutral-50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 transition-colors duration-500 min-h-screen relative overflow-x-hidden selection:bg-neutral-200 dark:selection:bg-neutral-800 selection:text-neutral-900 dark:selection:text-neutral-50">
-  
+
+<body
+  class="bg-neutral-50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 transition-colors duration-500 min-h-screen relative overflow-x-hidden selection:bg-neutral-200 dark:selection:bg-neutral-800 selection:text-neutral-900 dark:selection:text-neutral-50">
+
   <!-- Subtle premium background gradient glow -->
   <div class="absolute inset-0 -z-10 pointer-events-none opacity-40 dark:opacity-20 transition-opacity duration-500">
-    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-blue-200/40 to-transparent dark:from-blue-900/10 blur-3xl"></div>
-    <div class="absolute top-1/4 left-0 w-[300px] h-[300px] bg-gradient-to-tr from-neutral-200/30 to-transparent dark:from-neutral-900/20 blur-2xl"></div>
+    <div
+      class="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-blue-200/40 to-transparent dark:from-blue-900/10 blur-3xl">
+    </div>
+    <div
+      class="absolute top-1/4 left-0 w-[300px] h-[300px] bg-gradient-to-tr from-neutral-200/30 to-transparent dark:from-neutral-900/20 blur-2xl">
+    </div>
   </div>
 
   <div class="max-w-4xl mx-auto px-6 md:px-8 py-6 min-h-screen flex flex-col justify-between">
     <div>
       <!-- Top Navigation Bar -->
-      <nav class="flex justify-between items-center py-4 border-b border-neutral-200/50 dark:border-neutral-800/50 transition-colors duration-500">
+      <nav
+        class="flex justify-between items-center py-4 border-b border-neutral-200/50 dark:border-neutral-800/50 transition-colors duration-500">
         <!-- Nav Menu -->
         <ul class="flex items-center gap-6 md:gap-8">
           <li>
-            <a href="index.html" class="text-sm font-medium text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-200 transition-colors tracking-wide">
+            <a href="index.html"
+              class="text-sm font-medium text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-200 transition-colors tracking-wide">
               Home
             </a>
           </li>
           <li>
-            <a href="index.html#cv" class="text-sm font-medium text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-200 transition-colors tracking-wide">
+            <a href="index.html#cv"
+              class="text-sm font-medium text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-200 transition-colors tracking-wide">
               CV
             </a>
           </li>
           <li>
-            <a href="projects.html" class="text-sm font-semibold text-neutral-900 dark:text-neutral-50 transition-colors tracking-wide">
+            <a href="projects.html"
+              class="text-sm font-semibold text-neutral-900 dark:text-neutral-50 transition-colors tracking-wide">
               Projects
             </a>
           </li>
@@ -64,19 +77,24 @@
 
         <!-- Day/Night Switch and Label Container -->
         <div class="flex items-center gap-3">
-          <span class="text-xs font-semibold text-neutral-400 dark:text-neutral-500 tracking-wider uppercase select-none">
+          <span
+            class="text-xs font-semibold text-neutral-400 dark:text-neutral-500 tracking-wider uppercase select-none">
             Day/Night
           </span>
-          <button id="theme-toggle" class="w-12 h-6.5 rounded-full bg-neutral-200/80 dark:bg-neutral-800 border border-neutral-300/30 dark:border-neutral-700/50 relative cursor-pointer outline-none transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-neutral-400 dark:focus-visible:ring-neutral-600" aria-label="Toggle day and night theme">
+          <button id="theme-toggle"
+            class="w-12 h-6.5 rounded-full bg-neutral-200/80 dark:bg-neutral-800 border border-neutral-300/30 dark:border-neutral-700/50 relative cursor-pointer outline-none transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-neutral-400 dark:focus-visible:ring-neutral-600"
+            aria-label="Toggle day and night theme">
             <!-- Slider dot -->
-            <span class="w-5.5 h-5.5 rounded-full bg-white dark:bg-neutral-950 shadow-md absolute left-0.5 top-0.5 transition-transform duration-300 ease-out transform dark:translate-x-5.5 flex items-center justify-center">
+            <span
+              class="w-5.5 h-5.5 rounded-full bg-white dark:bg-neutral-950 shadow-md absolute left-0.5 top-0.5 transition-transform duration-300 ease-out transform dark:translate-x-5.5 flex items-center justify-center">
               <!-- Sun Icon (visible in light mode) -->
               <svg class="w-3.5 h-3.5 text-amber-500 dark:hidden" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 14.05a1 1 0 011.414 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zm-.707-8.485a1 1 0 010-1.414l.707-.707a1 1 0 011.414 1.414l-.707.707a1 1 0 01-1.414 0zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z"/>
+                <path
+                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 14.05a1 1 0 011.414 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zm-.707-8.485a1 1 0 010-1.414l.707-.707a1 1 0 011.414 1.414l-.707.707a1 1 0 01-1.414 0zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" />
               </svg>
               <!-- Moon Icon (visible in dark mode) -->
               <svg class="w-3.5 h-3.5 text-sky-400 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
               </svg>
             </span>
           </button>
@@ -85,7 +103,7 @@
 
       <!-- Main Content Section -->
       <main class="pt-6 space-y-8">
-        
+
         <div>
           <h1 class="text-3xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-none">
             Projects
@@ -94,44 +112,52 @@
 
         <!-- Project Cards / List -->
         <div class="divide-y divide-neutral-200/50 dark:divide-neutral-800/50 transition-colors duration-500">
-          
+
           <!-- Project 1 -->
           <article class="py-6 first:pt-0 group">
             <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2">
-              <h2 class="text-xl font-bold text-neutral-800 dark:text-neutral-100 group-hover:text-neutral-950 dark:group-hover:text-white transition-colors">
+              <h2
+                class="text-xl font-bold text-neutral-800 dark:text-neutral-100 group-hover:text-neutral-950 dark:group-hover:text-white transition-colors">
                 Arbitrage Prediction Market Tool
               </h2>
               <div class="flex flex-wrap gap-2">
-                <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 border border-blue-100/55 dark:border-blue-900/30">
+                <span
+                  class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 border border-blue-100/55 dark:border-blue-900/30">
                   Prediction Markets
                 </span>
-                <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 border border-emerald-100/55 dark:border-emerald-900/30">
+                <span
+                  class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 border border-emerald-100/55 dark:border-emerald-900/30">
                   Data Science
                 </span>
               </div>
             </div>
             <p class="text-base text-neutral-500 dark:text-neutral-400 mt-2.5 leading-relaxed max-w-2xl">
-              An advanced tool utilizing predictive modeling for efficient arbitrage detection in prediction markets. Automatically scrapes market rates, compares implied probabilities, and alerts users of risk-free profit configurations.
+              An advanced tool utilizing predictive modeling for efficient arbitrage detection in prediction markets.
+              Automatically scrapes market rates and compares implied probabilities
             </p>
           </article>
 
           <!-- Project 2 -->
           <article class="py-6 group">
             <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2">
-              <h2 class="text-xl font-bold text-neutral-800 dark:text-neutral-100 group-hover:text-neutral-950 dark:group-hover:text-white transition-colors">
+              <h2
+                class="text-xl font-bold text-neutral-800 dark:text-neutral-100 group-hover:text-neutral-950 dark:group-hover:text-white transition-colors">
                 Agentic AI for Qualitative Analysis
               </h2>
               <div class="flex flex-wrap gap-2">
-                <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-violet-50 dark:bg-violet-950/40 text-violet-600 dark:text-violet-400 border border-violet-100/55 dark:border-violet-900/30">
+                <span
+                  class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-violet-50 dark:bg-violet-950/40 text-violet-600 dark:text-violet-400 border border-violet-100/55 dark:border-violet-900/30">
                   AI Agents
                 </span>
-                <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 border border-amber-100/55 dark:border-amber-900/30">
+                <span
+                  class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 border border-amber-100/55 dark:border-amber-900/30">
                   NLP
                 </span>
               </div>
             </div>
             <p class="text-base text-neutral-500 dark:text-neutral-400 mt-2.5 leading-relaxed max-w-2xl">
-              Leveraging autonomous agents to streamline large-scale qualitative data analysis and synthesis. Extracts key themes, aggregates sentiment patterns, and builds structured reports from thousands of research logs automatically.
+              Leveraging autonomous agents to streamline large-scale qualitative data analysis and synthesis. Extracts
+              key themes, supporting quotes, and builds thematic table.
             </p>
           </article>
 
@@ -154,7 +180,7 @@
     themeToggleBtn.addEventListener('click', () => {
       // Toggle class
       document.documentElement.classList.toggle('dark');
-      
+
       // Update local storage
       if (document.documentElement.classList.contains('dark')) {
         localStorage.setItem('theme', 'dark');
@@ -164,4 +190,5 @@
     });
   </script>
 </body>
+
 </html>
