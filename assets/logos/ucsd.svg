@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <!-- UCSD Official Style Navy & Gold Shield Crest -->
+  <rect width="200" height="200" fill="#002244" rx="20"/>
+  <!-- Gold Shield Outer Border -->
+  <path d="M40 50 C40 50, 100 30, 160 50 C160 110, 150 160, 100 180 C50 160, 40 110, 40 50 Z" fill="none" stroke="#C5B358" stroke-width="8"/>
+  <!-- Inner Shield Area -->
+  <path d="M48 56 C48 56, 100 37, 152 56 C152 106, 142 150, 100 169 C58 150, 48 106, 48 56 Z" fill="#002d62"/>
+  <!-- Gold Open Book -->
+  <path d="M65 110 C80 100, 100 105, 100 115 C100 105, 120 100, 135 110 L135 75 C120 65, 100 70, 100 80 C100 70, 80 65, 65 75 Z" fill="#C5B358" stroke="#002244" stroke-width="2"/>
+  <line x1="100" y1="80" x2="100" y2="115" stroke="#002244" stroke-width="3"/>
+  <!-- Gold Stars / Accents -->
+  <polygon points="100,135 104,143 113,143 106,148 108,157 100,152 92,157 94,148 87,143 96,143" fill="#C5B358"/>
+  <circle cx="70" cy="55" r="4" fill="#C5B358"/>
+  <circle cx="100" cy="50" r="4" fill="#C5B358"/>
+  <circle cx="130" cy="55" r="4" fill="#C5B358"/>
+  <!-- Monogram text at the bottom -->
+  <text x="100" y="105" font-family="'Outfit', sans-serif" font-weight="900" font-size="12" fill="#002244" text-anchor="middle">UCSD</text>
+</svg>

@@ -8,107 +8,151 @@
 </head>
 <body>
 
-  <nav>
-    <a href="index.html">Bio</a>
-    <a href="cv.html"><strong>CV</strong></a>
-    <button class="theme-toggle-btn" id="themeToggle">Toggle Theme</button>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        Alvin<span>.</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Bio</a></li>
+          <li><a href="cv.html" class="nav-link active">CV</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle light and dark theme">
+          <!-- Moon Icon (Dark Mode) -->
+          <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <!-- Sun Icon (Light Mode) -->
+          <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
   </nav>
 
-  <main>
-    <!-- Education Section -->
-    <section class="cv-section">
-      <h2 class="cv-header">Education</h2>
+  <main class="container">
+    <div class="cv-container">
       
-      <div class="entry-list">
-        <!-- UC San Diego Entry -->
-        <div class="entry-item">
-          <!-- UC San Diego Logo -->
-          <div class="entry-logo-container" aria-hidden="true">
-            <svg class="entry-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-              <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-            </svg>
-          </div>
-          
-          <!-- Details -->
-          <div class="entry-content">
-            <div class="entry-header">
-              <div class="entry-left">
-                <h3 class="entry-title">BS Molecular Cell Biology</h3>
-                <span class="entry-org">UC San Diego</span>
-              </div>
-              <div class="entry-right">
-                <span class="entry-date">2021-2025</span>
-                <span class="entry-location">San Diego, CA</span>
-              </div>
-            </div>
-            <div class="entry-details">
-              TESTING
-            </div>
-          </div>
-        </div>
+      <!-- Timeline Left Column (Sticky Years) -->
+      <div class="timeline-years">
+        <div class="timeline-line-wrapper"></div>
+        <div class="timeline-year-node active" id="year-2026">2026</div>
+        <div class="timeline-year-node" id="year-2025">2025</div>
+        <div class="timeline-year-node" id="year-2021">2021</div>
       </div>
-    </section>
 
-    <!-- Experience Section -->
-    <section class="cv-section">
-      <h2 class="cv-header">Experience</h2>
-      
-      <div class="entry-list">
-        <!-- MGH Entry -->
-        <div class="entry-item">
-          <!-- MGH Logo -->
-          <div class="entry-logo-container" aria-hidden="true">
-            <svg class="entry-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-              <path d="M12 5v8M10 9h4"/>
-            </svg>
-          </div>
-          
-          <!-- Details -->
-          <div class="entry-content">
-            <div class="entry-header">
-              <div class="entry-left">
-                <h3 class="entry-title">Research Assistant</h3>
-                <span class="entry-org">MGH</span>
-              </div>
-              <div class="entry-right">
-                <span class="entry-date">2025-Present</span>
-                <span class="entry-location">Boston, MA</span>
+      <!-- Content Right Column (Cards Sorted Today to Past) -->
+      <div class="timeline-content-list">
+        
+        <!-- Experience: MGH (2025-Present) -->
+        <article class="cv-card" data-year-target="year-2026" id="mgh-card">
+          <div class="cv-card-header">
+            <!-- MGH Logo -->
+            <div class="logo-container">
+              <img src="assets/logos/mgh.svg" alt="Massachusetts General Hospital Logo" class="logo-img">
+            </div>
+            
+            <div class="cv-title-group">
+              <h3 class="cv-role">Research Assistant</h3>
+              <span class="cv-organization">Massachusetts General Hospital (MGH)</span>
+              <div>
+                <span class="accolade-badge accolade-green">
+                  <span class="pulsing-dot"></span>
+                  Present Role
+                </span>
               </div>
             </div>
-            <div class="entry-details">
-              TESTING
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section class="cv-section">
-      <h2 class="cv-header">Skills</h2>
-      <div class="entry-list">
-        <div class="entry-item">
-          <div class="entry-logo-container" aria-hidden="true">
-            <svg class="entry-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-            </svg>
+            <div class="cv-meta-group">
+              <span class="cv-date-badge">2025 - Present</span>
+              <div class="cv-location">Boston, MA</div>
+            </div>
           </div>
-          <div class="entry-content">
-            <div class="entry-header">
-              <div class="entry-left">
-                <h3 class="entry-title">Technical Skills</h3>
-                <span class="entry-org">Core Proficiencies</span>
+
+          <p class="entry-details">TESTING</p>
+
+          <ul class="cv-bullets">
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+            <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+            <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
+          </ul>
+        </article>
+
+        <!-- Education: UCSD (2021-2025) -->
+        <article class="cv-card" data-year-target="year-2025" id="ucsd-card">
+          <div class="cv-card-header">
+            <!-- UCSD Logo -->
+            <div class="logo-container">
+              <img src="assets/logos/ucsd.svg" alt="University of California San Diego Logo" class="logo-img">
+            </div>
+            
+            <div class="cv-title-group">
+              <h3 class="cv-role">BS Molecular Cell Biology</h3>
+              <span class="cv-organization">UC San Diego</span>
+              <div>
+                <span class="accolade-badge accolade-gold">★ Cum Laude</span>
               </div>
             </div>
-            <div class="entry-details">
-              TESTING
+
+            <div class="cv-meta-group">
+              <span class="cv-date-badge">2021 - 2025</span>
+              <div class="cv-location">San Diego, CA</div>
             </div>
           </div>
-        </div>
+
+          <p class="entry-details">TESTING</p>
+
+          <ul class="cv-bullets">
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+            <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+            <li>Sunt in culpa qui officia deserunt mollit anim id est laborum. Aliquip ex ea commodo consequat.</li>
+          </ul>
+        </article>
+
+        <!-- Technical Skills / Starting block (2021) -->
+        <article class="cv-card" data-year-target="year-2021" id="skills-card">
+          <div class="cv-card-header">
+            <div class="logo-container" style="background-color: var(--toggle-bg);">
+              <svg class="entry-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width: 32px; height: 32px;">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+              </svg>
+            </div>
+            
+            <div class="cv-title-group">
+              <h3 class="cv-role">Technical Foundations</h3>
+              <span class="cv-organization">Skills & Core Proficiencies</span>
+            </div>
+
+            <div class="cv-meta-group">
+              <span class="cv-date-badge">Core Stack</span>
+              <div class="cv-location">Continuous</div>
+            </div>
+          </div>
+
+          <p class="entry-details">TESTING</p>
+
+          <ul class="cv-bullets">
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+            <li>Aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+          </ul>
+        </article>
+
       </div>
-    </section>
+    </div>
   </main>
 
   <script src="js/main.js"></script>
