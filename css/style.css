@@ -2,6 +2,7 @@
 :root {
   --bg-color: #121212;
   --text-color: #ffffff;
+  --text-secondary: #94a3b8;
   --link-color: #3b82f6;
   --toggle-bg: #333333;
 }
@@ -9,6 +10,7 @@
 [data-theme="light"] {
   --bg-color: #ffffff;
   --text-color: #121212;
+  --text-secondary: #4b5563; /* text-gray-600 */
   --link-color: #2563eb;
   --toggle-bg: #e2e8f0;
 }
@@ -50,4 +52,106 @@ a:hover {
   cursor: pointer;
   border-radius: 4px;
   transition: background-color 0.3s;
+}
+
+/* ==========================================================================
+   CV SECTION STYLING
+   ========================================================================== */
+.cv-section {
+  margin-bottom: 2.5rem;
+}
+
+/* 1. Section Headers: Bold, dark sans-serif titles with a light grey horizontal divider line underneath */
+.cv-header {
+  font-weight: 700;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #e2e8f0; /* border-gray-200 */
+  padding-bottom: 0.5rem;           /* pb-2 */
+  margin-bottom: 1.5rem;
+}
+
+/* 2. Entry Container: List of entries with clean vertical spacing */
+.entry-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* space-y-6 equivalent */
+}
+
+/* Entry Item with thick blue vertical accent border on the left */
+.entry-item {
+  border-left: 4px solid #2563eb; /* border-l-4 border-blue-600 */
+  padding-left: 1rem;             /* pl-4 */
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+/* Logo Integration */
+.entry-logo-container {
+  width: 42px;
+  height: 42px;
+  background-color: var(--toggle-bg);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid var(--border-color, rgba(255,255,255,0.1));
+}
+
+.entry-logo {
+  width: 24px;
+  height: 24px;
+  color: var(--text-color);
+}
+
+/* Details Layout */
+.entry-content {
+  flex-grow: 1;
+}
+
+/* Top line / Header row (Flex layout with justify-between) */
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.entry-left, .entry-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.entry-right {
+  text-align: right;
+}
+
+.entry-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.entry-org {
+  font-size: 0.95rem;
+  color: var(--text-secondary); /* text-gray-600 */
+}
+
+.entry-date {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.entry-location {
+  font-size: 0.88rem;
+  color: var(--text-secondary); /* text-gray-600 */
+}
+
+/* Additional details row: Bullet-free details indented below */
+.entry-details {
+  font-size: 0.875rem;   /* text-sm */
+  color: var(--text-secondary); /* text-gray-600 */
+  margin-top: 0.25rem;   /* mt-1 */
 }
